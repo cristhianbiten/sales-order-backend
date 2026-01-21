@@ -1,6 +1,12 @@
 
 @localhost=localhost:4004/odata/v4/main
 
+@id=483f2adb-57db-4a2e-b635-b81ac479d044
+
+@customerId=f15c3f6e-c6f0-4ad0-8f5d-acae11c9a2fe
+
+@productId=2baa7beb-555e-40eb-bb77-9562caf50ce4
+
 GET http://{{localhost}}/SalesOrderHeaders
 Content-Type: application/json
 
@@ -9,16 +15,36 @@ Content-Type: application/json
 POST http://{{localhost}}/SalesOrderHeaders
 Content-Type: application/json
 
-{}
+{
+    "id": "{{id}}",
+    "customer_id": "{{customerId}}",
+    "totalAmount": 39.85,
+    "items": [
+        {
+            "id": "c004be3a-c1e7-4a65-a1ff-62d3b5f846a5",
+            "header_id": "{{id}}",
+            "product_id": "{{productId}}",
+            "quantity": 10,
+            "price": 2.99
+        },
+        {
+            "id": "be18307b-c7c3-446a-bd28-ef400ff7d4fa",
+            "header_id": "{{id}}",
+            "product_id": "{{productId}}",
+            "quantity": 5,
+            "price": 1.99
+        }
+    ]
+}
 
 ###
 
-DELETE http://{{localhost}}/SalesOrderHeaders(id=702ff68c-0304-458b-8ae8-35574c89b5ef)
+DELETE http://{{localhost}}/SalesOrderHeaders(id={{id}})
 Content-Type: application/json
 
 ###
 
-PUT http://{{localhost}}/SalesOrderHeaders(id=702ff68c-0304-458b-8ae8-35574c89b5ef)
+PUT http://{{localhost}}/SalesOrderHeaders(id={{id}})
 Content-Type: application/json
 
 {
