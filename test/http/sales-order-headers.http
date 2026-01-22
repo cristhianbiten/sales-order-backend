@@ -62,3 +62,9 @@ Content-Type: application/json
 ### Expandindo os items
 GET http://{{localhost}}/SalesOrderHeaders?$filter=id eq 483f2adb-57db-4a2e-b635-b81ac479d044 &$expand=items($expand=product;$filter=quantity ge 6), customer
 Content-Type: application/json
+
+###
+
+### Selecionar somente customer e id do sales order header
+GET http://{{localhost}}/SalesOrderHeaders?$select=id&$expand=customer($select=id,firstName)
+Content-Type: application/json
