@@ -55,3 +55,10 @@ Content-Type: application/json
 
 GET http://{{localhost}}/SalesOrderHeaders?$filter=totalAmount ge 4599898060056
 Content-Type: application/json
+
+
+###
+
+### Expandindo os items
+GET http://{{localhost}}/SalesOrderHeaders?$filter=id eq 483f2adb-57db-4a2e-b635-b81ac479d044 &$expand=items($expand=product;$filter=quantity ge 6), customer
+Content-Type: application/json
