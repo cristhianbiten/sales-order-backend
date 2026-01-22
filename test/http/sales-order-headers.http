@@ -81,3 +81,9 @@ Content-Type: application/json
 ### Paginando os registros
 GET http://{{localhost}}/SalesOrderHeaders?$skip=2&$top=3
 Content-Type: application/json
+
+###
+
+### Buscando dados com $search
+GET http://{{localhost}}/SalesOrderHeaders?$search=73e
+Content-Type: application/json

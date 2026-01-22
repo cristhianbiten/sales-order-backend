@@ -44,3 +44,9 @@ Content-Type: application/json
 
 GET http://{{localhost}}/Customers?$filter=firstName eq 'Cristhian' and lastName eq 'Bitencourt'
 Content-Type: application/json
+
+###
+
+### Buscando dados com $search
+GET http://{{localhost}}/Customers?$search=Cristhian
+Content-Type: application/json
