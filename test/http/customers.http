@@ -39,3 +39,8 @@ Content-Type: application/json
 {
     "email": "cris2@teste.com"
 }
+
+###
+
+GET http://{{localhost}}/Customers?$filter=firstName eq 'Cristhian' and lastName eq 'Bitencourt'
+Content-Type: application/json

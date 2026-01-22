@@ -50,3 +50,8 @@ Content-Type: application/json
 {
     "modifiedBy": "cris"
 }
+
+###
+
+GET http://{{localhost}}/SalesOrderHeaders?$filter=totalAmount ge 4599898060056
+Content-Type: application/json
