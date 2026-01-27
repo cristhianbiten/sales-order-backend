@@ -1,5 +1,5 @@
 import cds, { Request, Service } from "@sap/cds";
-import { Customers } from "@models/sales";
+import { Customers, Products, SalesOrderItem, SalesOrderItems } from "@models/sales";
 
 export default (service: Service) => {
     service.after('READ', 'Customers', (results: Customers) => {
@@ -12,11 +12,12 @@ export default (service: Service) => {
 
     service.before('CREATE', 'SalesOrderHeaders', async (request: Request) => {
         const params = request.data;
+        const items: SalesOrderItems = params.items;
+
         if (!params.customer_id) {
             return request.reject(400, 'Customer inválido');
         }
 
-        console.log(params);
         if (!params.items || params.items?.length === 0) {
             return request.reject(400, 'Itens inválidos');
         }
@@ -25,6 +26,19 @@ export default (service: Service) => {
         const customer = await cds.run(customerQuery);
         if (!customer) {
             return request.reject(404, 'Customer não encontrado');
+        }
+
+        const productsIds: string[] = params.items.map((item: SalesOrderItem) => item.product_id);
+        const productsQuery = SELECT.from('sales.Products').where({ id: productsIds });
+        const products: Products = await cds.run(productsQuery);
+        for (const item of items) {
+            const dbProduct = products.find(product => product.id === item.product_id);
+            if (!dbProduct) {
+                return request.reject(404, `Produto ${item.product_id} não encontrado`);
+            }
+            if (dbProduct.stock === 0) {
+                return request.reject(400, `Product ${dbProduct.name} (${dbProduct.id}) está sem estoque disponivel`);
+            }
         }
     });
 };
