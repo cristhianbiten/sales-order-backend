@@ -7,6 +7,11 @@
   resolved "https://registry.yarnpkg.com/@cap-js/cds-typer/-/cds-typer-0.38.0.tgz#34b418416f0606e59c9c10bdf991ab5d262e2fbf"
   integrity sha512-X/AAF3A02pNjxDQOpf+om0S+L1MWyFanz9/aQYwYvjUaaU/Tkx26ruziZ2MDbwVrAJ5iA6bSFYs6LP5/+oMdNQ==
 
+"@cap-js/cds-types@^0.15.0":
+  version "0.15.0"
+  resolved "https://registry.yarnpkg.com/@cap-js/cds-types/-/cds-types-0.15.0.tgz#fe12b03fe8586a0993c8e18d1afe38ee08533e3c"
+  integrity sha512-Bi0uQnzpCzBw2KHzFuMzobt0mvMG3as3bfVvRJAc8ooRuoVMyr3Y0iRVjmmoyOeE2ezG6EiF+Xp22QpJ7J+z+Q==
+
 "@cap-js/db-service@^2.8.1":
   version "2.8.1"
   resolved "https://registry.yarnpkg.com/@cap-js/db-service/-/db-service-2.8.1.tgz#e552543e9cd13c26b92b0214c111dc974e065ec6"
@@ -163,9 +168,9 @@
   integrity sha512-X+4v4LBAT8HIt0zr28/kJNS15nlNlcM97vAMW+agLrmK134nyBiMwUMcp8BMhxlG9B2PykrnAKH56D9O3tfoBg==
 
 "@sap/cds@^9":
-  version "9.6.3"
-  resolved "https://registry.yarnpkg.com/@sap/cds/-/cds-9.6.3.tgz#1c247c0a1087a5493c937b8d9136ddf68c859864"
-  integrity sha512-VZ5fDJt6ZAI6UzQnOzOgjgVjRRbI9Z1T1eVVCZ7FJkVTPSC05LVcKJ4nhjKgecE6sGkn7QyphIhu/933oYPccw==
+  version "9.6.4"
+  resolved "https://registry.yarnpkg.com/@sap/cds/-/cds-9.6.4.tgz#21356ded53d1c7c099a00e5a23103c5df7b7ead5"
+  integrity sha512-GPVuMxfQsuSs4q27gdFoof4rJhugXwhn7CSsP25XIRbyxZF4Us6pJrDgHUCip0IV9xUn/2CY/BxXPlhE0+Y+FA==
   dependencies:
     "@sap/cds-compiler" "^6.3"
     "@sap/cds-fiori" "^2"
@@ -216,9 +221,9 @@ asynckit@^0.4.0:
   integrity sha512-Oei9OH4tRh0YqU3GxhX79dM/mwVgvbZJaSNaRk+bshkj0S5cfHcgYakreBjrHwatXKbz+IoIdYLxrKim2MjW0Q==
 
 axios@*:
-  version "1.13.2"
-  resolved "https://registry.yarnpkg.com/axios/-/axios-1.13.2.tgz#9ada120b7b5ab24509553ec3e40123521117f687"
-  integrity sha512-VPk9ebNqPcy5lRGuSlKx752IlDatOjT9paPlm8A7yOuW2Fbvp4X3JznJtT4f0GzGLLiWE9W8onz51SqLYwzGaA==
+  version "1.13.3"
+  resolved "https://registry.yarnpkg.com/axios/-/axios-1.13.3.tgz#f123e77356630a22b0163920662556944f2be1a1"
+  integrity sha512-ERT8kdX7DZjtUm7IitEyV7InTHAF42iJuMArIiDIV5YtPanJkgw4hw5Dyg9fh0mihdWNn1GKaeIWErfe56UQ1g==
   dependencies:
     follow-redirects "^1.15.6"
     form-data "^4.0.4"
