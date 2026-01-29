@@ -15,7 +15,7 @@
             "roles": ["admin"],
             "attr": {
               "id": 1,
-              "groups": "groupo1"
+              "groups": ["grupo1", "grupo2"]
             }
           },
           "joaozinho": {
@@ -23,7 +23,7 @@
             "roles": ["read_only_user"],
             "attr": {
               "id": 2,
-              "groups": ["groupo1"]
+              "groups": ["grupo1"]
             }
           }
         }
