@@ -4,11 +4,13 @@
 
 GET http://{{localhost}}/Customers
 Content-Type: application/json
+Authorization: Basic joaozinho:Inicial@12345
 
 ###
 
 POST http://{{localhost}}/Customers
 Content-Type: application/json
+Authorization: Basic joaozinho:Inicial@12345
 
 {
   "id": "{{id}}",
@@ -21,11 +23,13 @@ Content-Type: application/json
 
 DELETE http://{{localhost}}/Customers(id={{id}})
 Content-Type: application/json
+Authorization: Basic joaozinho:Inicial@12345
 
 ###
 
 PUT http://{{localhost}}/Customers(id={{id}})
 Content-Type: application/json
+Authorization: Basic joaozinho:Inicial@12345
 
 {
     "email": "cris@teste.com"
@@ -35,6 +39,7 @@ Content-Type: application/json
 
 PATCH http://{{localhost}}/Customers(id={{id}})
 Content-Type: application/json
+Authorization: Basic joaozinho:Inicial@12345
 
 {
     "email": "cris2@teste.com"
@@ -44,16 +49,18 @@ Content-Type: application/json
 
 GET http://{{localhost}}/Customers?$filter=firstName eq 'Cristhian' and lastName eq 'Bitencourt'
 Content-Type: application/json
+Authorization: Basic joaozinho:Inicial@12345
 
 ###
 
 ### Buscando dados com $search
 GET http://{{localhost}}/Customers?$search=Cristhian
 Content-Type: application/json
-
+Authorization: Basic joaozinho:Inicial@12345
 
 ###
 
 ### Orderando customers com $orderby
 GET http://{{localhost}}/Customers?$orderby=firstName desc
 Content-Type: application/json
+Authorization: Basic joaozinho:Inicial@12345

@@ -46,11 +46,13 @@ Authorization: Basic joaozinho:Inicial@12345
 
 DELETE http://{{localhost}}/SalesOrderHeaders(id={{id}})
 Content-Type: application/json
+Authorization: Basic joaozinho:Inicial@12345
 
 ###
 
 PUT http://{{localhost}}/SalesOrderHeaders(id={{id}})
 Content-Type: application/json
+Authorization: Basic joaozinho:Inicial@12345
 
 {
     "modifiedBy": "cris"
@@ -60,35 +62,39 @@ Content-Type: application/json
 
 GET http://{{localhost}}/SalesOrderHeaders?$filter=totalAmount ge 4599898060056
 Content-Type: application/json
-
+Authorization: Basic joaozinho:Inicial@12345
 
 ###
 
 ### Expandindo os items
 GET http://{{localhost}}/SalesOrderHeaders?$filter=id eq 483f2adb-57db-4a2e-b635-b81ac479d044 &$expand=items($expand=product;$filter=quantity ge 6), customer
 Content-Type: application/json
+Authorization: Basic joaozinho:Inicial@12345
 
 ###
 
 ### Selecionar somente customer e id do sales order header
 GET http://{{localhost}}/SalesOrderHeaders?$select=id&$expand=customer($select=id,firstName)
 Content-Type: application/json
+Authorization: Basic joaozinho:Inicial@12345
 
 ###
 
 ### Descobrindo a quantidade de registros
 GET http://{{localhost}}/SalesOrderHeaders/$count
 Content-Type: application/json
-
+Authorization: Basic joaozinho:Inicial@12345
 
 ###
 
 ### Paginando os registros
 GET http://{{localhost}}/SalesOrderHeaders?$skip=2&$top=3
 Content-Type: application/json
+Authorization: Basic joaozinho:Inicial@12345
 
 ###
 
 ### Buscando dados com $search
 GET http://{{localhost}}/SalesOrderHeaders?$search=73e
 Content-Type: application/json
+Authorization: Basic joaozinho:Inicial@12345

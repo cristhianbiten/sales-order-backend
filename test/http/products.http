@@ -4,11 +4,13 @@
 
 GET http://{{localhost}}/Products
 Content-Type: application/json
+Authorization: Basic cuka:Inicial@12345
 
 ###
 
 POST http://{{localhost}}/Products
 Content-Type: application/json
+Authorization: Basic cuka:Inicial@12345
 
 {
   "id": "{{id}}",
@@ -20,11 +22,13 @@ Content-Type: application/json
 
 DELETE http://{{localhost}}/Products(id={{id}})
 Content-Type: application/json
+Authorization: Basic joaozinho:Inicial@12345
 
 ###
 
 PUT http://{{localhost}}/Products(id={{id}})
 Content-Type: application/json
+Authorization: Basic joaozinho:Inicial@12345
 
 {
     "price": 2.99
@@ -34,6 +38,7 @@ Content-Type: application/json
 
 PATCH http://{{localhost}}/Products(id={{id}})
 Content-Type: application/json
+Authorization: Basic joaozinho:Inicial@12345
 
 {
     "price": 3.99
