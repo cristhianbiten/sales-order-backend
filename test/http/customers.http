@@ -10,7 +10,7 @@ Authorization: Basic joaozinho:Inicial@12345
 
 POST http://{{localhost}}/Customers
 Content-Type: application/json
-Authorization: Basic joaozinho:Inicial@12345
+Authorization: Basic cuka:Inicial@12345
 
 {
   "id": "{{id}}",

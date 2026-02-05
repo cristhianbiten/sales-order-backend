@@ -18,12 +18,11 @@ Authorization: Basic joaozinho:Inicial@12345
 
 POST http://{{localhost}}/SalesOrderHeaders
 Content-Type: application/json
-Authorization: Basic joaozinho:Inicial@12345
+Authorization: Basic cuka:Inicial@12345
 
 {
     "id": "{{id}}",
     "customer_id": "{{customerId}}",
-    "totalAmount": 39.85,
     "items": [
         {
             "id": "c004be3a-c1e7-4a65-a1ff-62d3b5f846a5",

@@ -53,6 +53,13 @@ export default (service: Service) => {
                 return request.reject(400, `Product ${dbProduct.name} (${dbProduct.id}) está sem estoque disponivel`);
             }
         }
+
+        let totalAmount = 0;
+        items.forEach(item => {
+            totalAmount += (item.price as number) * (item.quantity as number);
+        })
+        request.data.totalAmount = totalAmount;
+
     });
 
     service.after('CREATE', 'SalesOrderHeaders', async (results: SalesOrderHeaders) => {
