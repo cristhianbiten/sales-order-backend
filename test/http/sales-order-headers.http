@@ -29,14 +29,14 @@ Authorization: Basic cuka:Inicial@12345
             "header_id": "{{id}}",
             "product_id": "{{productId1}}",
             "quantity": 10,
-            "price": 2.99
+            "price": 2999
         },
         {
             "id": "be18307b-c7c3-446a-bd28-ef400ff7d4fa",
             "header_id": "{{id}}",
             "product_id": "{{productId2}}",
             "quantity": 5,
-            "price": 1.99
+            "price": 1999
         }
     ]
 }
@@ -45,7 +45,7 @@ Authorization: Basic cuka:Inicial@12345
 
 DELETE http://{{localhost}}/SalesOrderHeaders(id={{id}})
 Content-Type: application/json
-Authorization: Basic joaozinho:Inicial@12345
+Authorization: Basic cuka:Inicial@12345
 
 ###
 
