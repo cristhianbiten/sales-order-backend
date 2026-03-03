@@ -14,8 +14,10 @@
     "@types/axios": "^0.14.4",
     "@types/node": "^25.0.10",
     "eslint": "^10.0.2",
+    "eslint-plugin-prettier": "^5.5.5",
     "git-commit-msg-linter": "^5.0.8",
     "globals": "^17.4.0",
+    "prettier": "^3.8.1",
     "tsx": "^4.21.0",
     "typescript": "^5.9.3",
     "typescript-eslint": "^8.56.1"
