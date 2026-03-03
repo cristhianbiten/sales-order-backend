@@ -4,7 +4,7 @@ import cds from '@sap/cds';
 
 export class SalesOrderLogRepositoryImpl implements SalesOrderLogRepository {
     public async create(logs: SalesOrderLogModel[]): Promise<void> {
-        const logsObjects = logs.map(log => log.toObject());
+        const logsObjects = logs.map((log) => log.toObject());
         await cds.create('sales.SalesOrderLogs').entries(logsObjects);
     }
 }

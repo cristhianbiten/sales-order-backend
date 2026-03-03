@@ -5,7 +5,6 @@ import { Products } from '@models/sales';
 import { ProductModel, ProductProps } from 'srv/models/product';
 
 export class ProductRepositoryImpl implements ProductRepository {
-
     public async updateStock(product: ProductModel): Promise<void> {
         await cds.update('sales.Products').where({ id: product.id }).with({ stock: product.stock });
     }
@@ -18,13 +17,13 @@ export class ProductRepositoryImpl implements ProductRepository {
             return null;
         }
 
-        return products.map(product => ProductModel.with(
-            {
+        return products.map((product) =>
+            ProductModel.with({
                 id: product.id as string,
                 name: product.name as string,
                 price: product.price as number,
-                stock: product.stock as number,
-            }
-        ));
+                stock: product.stock as number
+            })
+        );
     }
 }

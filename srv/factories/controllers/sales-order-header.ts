@@ -7,4 +7,3 @@ const makeSalesOrderHeaderController = (): SalesOrderHeaderController => {
 };
 
 export const salesOrderHeaderController = makeSalesOrderHeaderController();
-

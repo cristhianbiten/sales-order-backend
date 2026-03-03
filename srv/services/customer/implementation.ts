@@ -3,9 +3,8 @@ import { CustomerService } from './protocols';
 import { Customers } from '@models/sales';
 
 export class CustomerServiceImpl implements CustomerService {
-
     public afterRead(customerList: Customers): Customers {
-        const customers = customerList.map(c => {
+        const customers = customerList.map((c) => {
             const customer = CustomerModel.with({
                 id: c.id as string,
                 firstName: c.firstName as string,
@@ -18,5 +17,4 @@ export class CustomerServiceImpl implements CustomerService {
 
         return customers;
     }
-
 }

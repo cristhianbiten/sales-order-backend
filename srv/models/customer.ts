@@ -1,13 +1,12 @@
-
 export type CustomerProps = {
     id: string;
     firstName: string;
     lastName: string;
     email: string;
-}
+};
 
 export class CustomerModel {
-    constructor(private props: CustomerProps) { }
+    constructor(private props: CustomerProps) {}
 
     public static with(props: CustomerProps): CustomerModel {
         return new CustomerModel(props);

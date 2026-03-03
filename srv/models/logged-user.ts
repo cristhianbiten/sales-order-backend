@@ -2,15 +2,15 @@ type LoggedUserProps = {
     id: string;
     roles: string[];
     attributes: LoggedUserAttributesProps;
-}
+};
 
 type LoggedUserAttributesProps = {
     id: number;
     groups: string[];
-}
+};
 
 export class LoggedUserModel {
-    constructor(public props: LoggedUserProps) { }
+    constructor(public props: LoggedUserProps) {}
 
     public static create(props: LoggedUserProps): LoggedUserModel {
         return new LoggedUserModel(props);
@@ -30,5 +30,5 @@ export class LoggedUserModel {
 
     public toStringifiedObject(): string {
         return JSON.stringify(this.props);
-    }    
+    }
 }

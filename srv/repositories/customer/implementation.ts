@@ -16,6 +16,5 @@ export class CustomerRepositoryImpl implements CustomerRepository {
             lastName: dbCustomer?.lastName as string,
             email: dbCustomer.email as string
         });
-
     }
 }

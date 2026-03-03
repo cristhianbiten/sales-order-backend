@@ -3,7 +3,7 @@ export type ProductProps = {
     name: string;
     price: number;
     stock: number;
-}
+};
 
 export type SellValidationResult = {
     hasErrors: boolean;
@@ -11,7 +11,7 @@ export type SellValidationResult = {
 };
 
 export class ProductModel {
-    private constructor(private props: ProductProps) { }
+    private constructor(private props: ProductProps) {}
 
     public static with(props: ProductProps): ProductModel {
         return new ProductModel(props);
@@ -49,5 +49,4 @@ export class ProductModel {
             hasErrors: false
         };
     }
-
 }

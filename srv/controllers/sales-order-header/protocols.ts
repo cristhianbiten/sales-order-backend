@@ -9,5 +9,5 @@ export type CreationValidationResult = {
 
 export interface SalesOrderHeaderController {
     beforeCreate(params: SalesOrderHeader): Promise<CreationValidationResult>;
-    afterCreate(params: SalesOrderHeaders, loggedUser: User ): Promise<void>;
+    afterCreate(params: SalesOrderHeaders, loggedUser: User): Promise<void>;
 }
