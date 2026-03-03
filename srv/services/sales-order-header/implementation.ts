@@ -1,16 +1,16 @@
-import { SalesOrderHeader, SalesOrderHeaders, SalesOrderItem, SalesOrderItems } from "@models/sales";
-import { SalesOrderHeaderModel } from "srv/models/sales-order-header";
-import { ProductRepository } from "../../repositories/product/protocols";
-import { SalesOrderItemModel } from "srv/models/sales-order-item";
-import { CustomerRepository } from "../../repositories/customer/protocols";
-import { CreationValidationResult, SalesOrderHeaderService } from "./protocols";
-import { ProductModel } from "srv/models/product";
-import { CustomerModel } from "srv/models/customer";
-import { SalesOrderLogModel } from "srv/models/sales-order-log";
-import { salesOrderHeaderController } from "srv/factories/controllers/sales-order-header";
-import { SalesOrderLogRepository } from "srv/repositories/sales-order-log/protocols";
-import { User } from "@sap/cds";
-import { LoggedUserModel } from "srv/models/logged-user";
+import { User } from '@sap/cds';
+
+import { CustomerModel } from 'srv/models/customer';
+import { CustomerRepository } from '../../repositories/customer/protocols';
+import { LoggedUserModel } from 'srv/models/logged-user';
+import { ProductModel } from 'srv/models/product';
+import { ProductRepository } from '../../repositories/product/protocols';
+import { SalesOrderHeaderModel } from 'srv/models/sales-order-header';
+import { SalesOrderItemModel } from 'srv/models/sales-order-item';
+import { SalesOrderLogModel } from 'srv/models/sales-order-log';
+import { SalesOrderLogRepository } from 'srv/repositories/sales-order-log/protocols';
+import { CreationValidationResult, SalesOrderHeaderService } from './protocols';
+import { SalesOrderHeader, SalesOrderHeaders, SalesOrderItem,  } from '@models/sales';
 
 export class SalesOrderHeaderServiceImpl implements SalesOrderHeaderService {
     constructor(
@@ -46,7 +46,7 @@ export class SalesOrderHeaderServiceImpl implements SalesOrderHeaderService {
         return {
             hasErrors: false,
             totalAmount: header.calculateDiscount(),
-        }
+        };
     }
 
     public async afterCreate(params: SalesOrderHeaders, loggedUser: User): Promise<void> {
@@ -112,7 +112,7 @@ export class SalesOrderHeaderServiceImpl implements SalesOrderHeaderService {
                 id: loggedUser.attr.id as unknown as number,
                 groups: loggedUser.attr.groups as unknown as string[]
             }
-        })
+        });
     }
 
     private getSalesOrderLog(salesOrderHeader: SalesOrderHeaderModel, user: LoggedUserModel): SalesOrderLogModel {

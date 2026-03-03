@@ -1,5 +1,6 @@
-import { SalesOrderHeader, SalesOrderHeaders } from "@models/sales";
-import { User } from "@sap/cds";
+import { User } from '@sap/cds';
+import { SalesOrderHeader, SalesOrderHeaders } from '@models/sales';
+
 
 export type CreationValidationResult = {
     hasErrors: boolean;

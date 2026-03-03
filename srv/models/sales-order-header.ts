@@ -1,4 +1,4 @@
-import { SalesOrderItemModel } from "./sales-order-item";
+import { SalesOrderItemModel } from './sales-order-item';
 
 type SalesOrderHeaderProps = {
     id: string;
@@ -67,20 +67,19 @@ export class SalesOrderHeaderModel {
 
         return {
             hasErrors: false,
-        }
+        };
     }
 
     public calculateTotalAmount(): number {
         let totalAmount = 0;
         this.items.forEach(item => {
             totalAmount += (item.price as number) * (item.quantity as number);
-        })
+        });
         return totalAmount;
     }
 
     public calculateDiscount(): number {
-        let totalAmount = 0;
-        totalAmount = this.calculateTotalAmount();
+        let totalAmount = this.calculateTotalAmount();
         if (totalAmount > 30000) {
             const discount = totalAmount * (10 / 100);
             totalAmount = totalAmount - discount;
@@ -109,7 +108,7 @@ export class SalesOrderHeaderModel {
 
         return {
             hasErrors: false,
-        }
+        };
     }
 
     private validateItemsOnCreation(items: SalesOrderHeaderProps['items']): CreationValidationResult {
@@ -137,7 +136,7 @@ export class SalesOrderHeaderModel {
 
         return {
             hasErrors: false,
-        }
+        };
     }
 
 }
