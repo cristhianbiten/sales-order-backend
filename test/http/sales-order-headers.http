@@ -16,6 +16,12 @@ Authorization: Basic joaozinho:Inicial@12345
 
 ###
 
+GET http://{{localhost}}/SalesOrderHeaders(id={{id}})
+Content-Type: application/json
+Authorization: Basic joaozinho:Inicial@12345
+
+###
+
 POST http://{{localhost}}/SalesOrderHeaders
 Content-Type: application/json
 Authorization: Basic cuka:Inicial@12345
@@ -95,5 +101,10 @@ Authorization: Basic joaozinho:Inicial@12345
 
 ### Buscando dados com $search
 GET http://{{localhost}}/SalesOrderHeaders?$search=73e
+Content-Type: application/json
+Authorization: Basic joaozinho:Inicial@12345
+
+### Buscando logs
+GET http://{{localhost}}/SalesOrderLogs
 Content-Type: application/json
 Authorization: Basic joaozinho:Inicial@12345
