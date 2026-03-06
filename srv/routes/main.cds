@@ -1,4 +1,4 @@
-using {sales} from '../db/schema';
+using {sales} from '../../db/schema';
 
 @requeires: 'authenticated-user'
 service MainService {
