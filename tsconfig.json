@@ -1,5 +1,6 @@
 {
   "compilerOptions": {
+    "isolatedModules": true,
     "target": "esnext",
     "module": "nodenext",
     "moduleResolution": "nodenext",
@@ -7,13 +8,24 @@
     "strictNullChecks": true,
     "noImplicitAny": true,
     "esModuleInterop": true,
+    "skipLibCheck": true,
     "outDir": "./dist",
     "baseUrl": "./",
     "rootDir": "./",
+    "sourceMap": true,
     "paths": {
-      "@models/*": ["./@cds-models/*/index.ts"]
+      "@models/*": [
+        "./@cds-models/*/index.ts"
+      ],
+      "@/*": [
+        "./srv/*"
+      ],
     }
   },
-  "include": ["srv"],
-  "exclude": ["node_modules"]
+  "include": [
+    "srv"
+  ],
+  "exclude": [
+    "node_modules"
+  ]
 }
