@@ -1,5 +1,6 @@
-import { ExpectedResult as SalesReportByDays } from '@models/db/types/SalesReport';
+import { ExpectedResult as SalesReport } from '@models/db/types/SalesReport';
 
 export interface SalesReportService {
-    findByDays(days: number): Promise<SalesReportByDays[]>;
+    findByDays(days: number): Promise<SalesReport[]>;
+    findByCustomerId(customerId: string): Promise<SalesReport[]>;
 }
