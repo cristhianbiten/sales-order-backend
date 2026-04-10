@@ -9,6 +9,7 @@ import { customerController } from '@/factories/controllers/customer';
 import { salesOrderHeaderController } from '@/factories/controllers/sales-order-header';
 import { salesReportController } from '@/factories/controllers/sales-report';
 
+// eslint-disable-next-line max-lines-per-function
 export default (service: Service) => {
     service.before('READ', '*', (request: Request) => {
         if (!request.user.is('read_only_user')) {
@@ -36,5 +37,9 @@ export default (service: Service) => {
     service.on('getSalesReportByDays', async (request: Request) => {
         const days = request.data?.days || 7;
         return salesReportController.findByDays(days);
+    });
+    service.on('getSalesReportByCustomerId', async (request: Request) => {
+        const [{ id: customerId }] = request.params as unknown as { id: string }[];
+        return salesReportController.findByCustomerId(customerId);
     });
 };
