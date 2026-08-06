@@ -13,4 +13,5 @@ export interface SalesOrderHeaderController {
     beforeCreate(params: SalesOrderHeader): Promise<CreationValidationResult>;
     afterCreate(params: SalesOrderHeaders, loggedUser: User): Promise<void>;
     bulkCreate(params: BulkCreateSalesOrderPayload[], loggedUser: User): Promise<CreationValidationResult>;
+    cloneSalesOrder(id: string, loggedUser: User): Promise<CreationValidationResult>;
 }

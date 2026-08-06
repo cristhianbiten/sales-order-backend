@@ -23,4 +23,8 @@ export class SalesOrderHeaderControllerImpl implements SalesOrderHeaderControlle
     ): Promise<CreationValidationResult> {
         return this.service.bulkCreate(params, loggedUser);
     }
+
+    public async cloneSalesOrder(id: string, loggedUser: User): Promise<CreationValidationResult> {
+        return this.service.cloneSalesOrder(id, loggedUser);
+    }
 }
