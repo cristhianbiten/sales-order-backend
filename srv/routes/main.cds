@@ -8,7 +8,11 @@ using {
 // Entities
 service MainService {
 
-    entity SalesOrderHeaders  as projection on sales.SalesOrderHeaders;
+    entity SalesOrderHeaders  as projection on sales.SalesOrderHeaders
+        actions {
+            action cloneSalesOrder() returns Boolean;
+        };
+
     entity SalesOrderStatuses as projection on sales.SalesOrderStatuses;
 
     entity Customers          as projection on sales.Customers
